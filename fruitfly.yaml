@@ -1,0 +1,25 @@
+logging:
+  level: debug
+  destination: stderr
+modules:
+  me7diag:
+    variables:
+      - name: wot
+        addr: 0x38099C
+        options:
+          comment: accelerator pedal position
+          unit: '%'
+          factor: 0.392157
+      - name: tmot
+        addr: 0x380a30
+        options:
+          factor: 0.75
+          offset: 48
+          comment: coolant temperature
+          unit: C
+      - name: ub
+        addr: 0x380990
+        options:
+          factor: 0.0704
+          comment: battery voltage
+          unit: V
